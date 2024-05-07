@@ -901,6 +901,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="SingularityGroup.HotReload.Runtime.Public.csproj">
+      <Project>{E715F76C-E3FB-F727-EA72-FFD55566E918}</Project>
+      <Name>SingularityGroup.HotReload.Runtime.Public</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{1A2EA772-2E18-4328-ADEA-2242C825B3F9}</Project>
       <Name>Unity.Timeline</Name>

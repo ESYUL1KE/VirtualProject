@@ -28,6 +28,6 @@ public class Grenade : MonoBehaviour
 
     private void Exploded()
     {
-        Debug.Log("Boom!");
+        
     }
 }
