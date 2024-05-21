@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Packages/com.singularitygroup.hotreload/Runtime/Public/SingularityGroup.HotReload.Runtime.Public.asmdef.meta
+guid: f2be1b7392ef6cc4eafd0ee8ac7a090a
+========
+guid: ec10eb674fe33dc418851b064a84acc4
+>>>>>>>> 6b3ad7fcad08831360731dd93b4d24dbe4aefd16:Assets/Samples/XR Interaction Toolkit/2.5.4/Hands Interaction Demo/Editor/Unity.XR.Interaction.Toolkit.Samples.Hands.Editor.asmdef.meta
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
