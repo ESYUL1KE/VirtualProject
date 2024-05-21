@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Samples/XR Hands/1.4.1/HandVisualizer/Materials/HandsDefaultMaterial.mat.meta
-guid: 00210504c53f2d34686b442285eb1d65
+<<<<<<<< HEAD:Assets/Samples/XR Interaction Toolkit/2.5.4/Hands Interaction Demo/HandsDemoSceneAssets/Materials/ChessPiece.mat.meta
+guid: 020412a188ef87e42bc339122f662827
 ========
-guid: 1d8c78a5077b22e43a15ff0aadf88c2e
->>>>>>>> 070b8e96555f93921c6cab5243a42cf42bc312e1:Assets/Samples/XR Interaction Toolkit/2.5.4/Hands Interaction Demo/HandsDemoSceneAssets/Materials/AccentButton.mat.meta
+guid: 53c16fb5d5c516b40a1f6a8fc34132f3
+>>>>>>>> e8d2a8ca5792428d12ee6d8e3c8ab935c72812f4:Assets/Samples/XR Interaction Toolkit/2.5.4/Hands Interaction Demo/HandsDemoSceneAssets/Materials/AccentButton.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0

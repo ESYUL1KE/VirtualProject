@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: d7150507b09b2994a95dcc2c9df77add
+<<<<<<<< HEAD:Assets/Samples/XR Interaction Toolkit/2.5.4/Hands Interaction Demo/HandsDemoSceneAssets/Materials/Chrome.mat.meta
+guid: ff65f3a6134cdbe45851fc78039e5712
+========
+guid: 40808a1b89c64184e9466aaec1fd1ac1
+>>>>>>>> e8d2a8ca5792428d12ee6d8e3c8ab935c72812f4:Assets/Samples/XR Interaction Toolkit/2.5.4/Hands Interaction Demo/HandsDemoSceneAssets/Materials/ChessPiece.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0

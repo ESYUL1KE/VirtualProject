@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/02.CSH/Icon Pack.meta
+guid: 8f0d112225ae36648b27199d0a563436
+========
 guid: 9e1b50f3dd33cbf4fb26433e7abcf6c9
+>>>>>>>> e8d2a8ca5792428d12ee6d8e3c8ab935c72812f4:Assets/02.CSH/02.Prefabs.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
