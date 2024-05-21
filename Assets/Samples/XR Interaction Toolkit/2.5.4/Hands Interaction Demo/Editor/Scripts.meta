@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: cff7d04f24df5594586b6ebc95cc31f4
+<<<<<<<< HEAD:Packages/com.singularitygroup.hotreload/Runtime/Demo/Scripts.meta
+guid: 8892a912f9a641c478277fd4d49e36bc
+========
+guid: f696b25a8899d8b4baccdf6bb0970fad
+>>>>>>>> 6b3ad7fcad08831360731dd93b4d24dbe4aefd16:Assets/Scripts.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
