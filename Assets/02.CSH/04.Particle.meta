@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Samples/XR Hands/1.4.1/HandVisualizer/Prefabs.meta
+guid: cd666f63ffc6b084194d365ea0628e45
+========
 guid: c679c8a7e56335c4c91637f6f9ce7225
+>>>>>>>> e8d2a8ca5792428d12ee6d8e3c8ab935c72812f4:Assets/02.CSH/04.Particle.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
