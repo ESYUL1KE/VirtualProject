@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 00210504c53f2d34686b442285eb1d65
+<<<<<<<< HEAD:Assets/Samples/XR Interaction Toolkit/2.5.4/Hands Interaction Demo/HandsDemoSceneAssets/Materials/AccentButton.mat.meta
+guid: 4082dbe2a38d4914888dcb0003feb090
+========
+guid: c6833e5a9456be6499b4925cef739ff6
+>>>>>>>> 070b8e96555f93921c6cab5243a42cf42bc312e1:Assets/Samples/XR Hands/1.4.1/HandVisualizer/Materials/HandsDefaultMaterial.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0
