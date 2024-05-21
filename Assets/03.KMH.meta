@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/03.KMH.meta
-guid: 96189e887e8a9bd4c92d5932faf51f30
-========
-guid: fc418d5ed5159f24b9212a11bb97db1d
->>>>>>>> 6b3ad7fcad08831360731dd93b4d24dbe4aefd16:Assets/Oculus Hands.meta
+guid: 0dbcc3a0ddab4254a84d5c8a2ce07a5e
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

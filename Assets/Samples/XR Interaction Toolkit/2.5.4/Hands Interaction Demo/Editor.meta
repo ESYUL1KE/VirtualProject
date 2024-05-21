@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Packages/com.singularitygroup.hotreload/Editor.meta
-guid: fe950901c78084e4faf9f593d5519af5
-========
 guid: 981a9b62b953c3045a7054300387cca1
->>>>>>>> 6b3ad7fcad08831360731dd93b4d24dbe4aefd16:Assets/Samples/XR Interaction Toolkit/2.5.4/Hands Interaction Demo/Editor.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

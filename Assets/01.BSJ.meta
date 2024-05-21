@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/01.BSJ.meta
-guid: de3dfe4e76430f34bb5f065feb74c1b5
-========
-guid: 004f0e70ab2efb54a9d93a283d657b97
->>>>>>>> 6b3ad7fcad08831360731dd93b4d24dbe4aefd16:Assets/Samples/XR Interaction Toolkit/2.5.4/Starter Assets/Editor.meta
+guid: 713706fb6a9d39e43ac28d76f9ab37cb
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
