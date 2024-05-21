@@ -60,9 +60,9 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Samples\XR Interaction Toolkit\2.5.4\XR Device Simulator\Scripts\XRDeviceSimulatorHandsUI.cs" />
     <Compile Include="Assets\Samples\XR Interaction Toolkit\2.5.4\XR Device Simulator\Scripts\XRDeviceSimulatorUI.cs" />
     <Compile Include="Assets\Samples\XR Interaction Toolkit\2.5.4\XR Device Simulator\Scripts\XRDeviceSimulatorControllerUI.cs" />
+    <Compile Include="Assets\Samples\XR Interaction Toolkit\2.5.4\XR Device Simulator\Scripts\XRDeviceSimulatorHandsUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Samples\XR Interaction Toolkit\2.5.4\XR Device Simulator\Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator.asmdef" />
