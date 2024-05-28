@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Samples/XR Interaction Toolkit/2.5.4/Hands Interaction Demo/HandsDemoSceneAssets/Materials/ChessPiece.mat.meta
+guid: 020412a188ef87e42bc339122f662827
+========
+guid: 53c16fb5d5c516b40a1f6a8fc34132f3
+>>>>>>>> e8d2a8ca5792428d12ee6d8e3c8ab935c72812f4:Assets/Samples/XR Interaction Toolkit/2.5.4/Hands Interaction Demo/HandsDemoSceneAssets/Materials/AccentButton.mat.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

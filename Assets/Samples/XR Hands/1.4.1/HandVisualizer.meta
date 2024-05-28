@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/02.CSH.meta
+<<<<<<<< HEAD:Assets/M67.meta
+guid: dc7d67999d158b040b84693f921af0d8
+========
+guid: 4e1d2cc4cbc0e6e47b6a6cae041fe432
+>>>>>>>> e8d2a8ca5792428d12ee6d8e3c8ab935c72812f4:Assets/Samples/XR Hands/1.4.1/HandVisualizer.meta
+========
+guid: aa7b5a87469b55841bb9a27f71537815
+>>>>>>>> 6b3ad7fcad08831360731dd93b4d24dbe4aefd16:Assets/M67.meta
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
