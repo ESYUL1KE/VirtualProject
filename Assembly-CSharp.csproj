@@ -62,13 +62,14 @@
   <ItemGroup>
     <Compile Include="Assets\Asset\Particle\ParticlePack\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Asset\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DrawerMech.cs" />
+    <Compile Include="Assets\Asset\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DoorMech.cs" />
+    <Compile Include="Assets\01.BSJ\01.Scritps\Zombie.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\ProximityActivate.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\AnimateHandOnInput.cs" />
-    <Compile Include="Assets\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DoorMech.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\SimpleCharacterMotor.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\AdjustTimeScale.cs" />
     <Compile Include="Assets\04.LCH\01.Scritps\Explosion.cs" />
-    <Compile Include="Assets\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DrawerMech.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Ramps\Runtime\RampAsset.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
   </ItemGroup>
@@ -83,7 +84,7 @@
     <None Include="Assets\Asset\Particle\ParticlePack\EffectExamples\Magic Effects\Shaders\Ice.shader" />
     <None Include="Assets\Asset\Particle\ParticlePack\EffectExamples\Misc Effects\Shaders\Respawn.shader" />
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
-    <None Include="Assets\FreeOpenBuilding_1.1.2\FOB_Props\Material\UseMaterialFromBuildingFolder.txt" />
+    <None Include="Assets\Asset\FreeOpenBuilding_1.1.2\FOB_Props\Material\UseMaterialFromBuildingFolder.txt" />
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
@@ -93,8 +94,8 @@
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Asset\Particle\ParticlePack\EffectExamples\Misc Effects\Shaders\FireFly.shader" />
-    <None Include="Assets\FreeOpenBuilding_1.1.2\Important Info!.txt" />
-    <None Include="Assets\FreeOpenBuilding_1.1.2\FOB_Props\Texture\UseTextureFromBuildingFolder.txt" />
+    <None Include="Assets\Asset\FreeOpenBuilding_1.1.2\Important Info!.txt" />
+    <None Include="Assets\Asset\FreeOpenBuilding_1.1.2\FOB_Props\Texture\UseTextureFromBuildingFolder.txt" />
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
@@ -1003,12 +1004,12 @@
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.XR.Oculus.Editor">
