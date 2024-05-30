@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/04.LCH/06.Materials/Blue.mat.meta
+guid: 8ef74b7c4f4d4cf44aa9c969ebb103d5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+========
 guid: c7fed8bb170036941930072ba5061f4d
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0
+>>>>>>>> 8e4488cb349589fc521959c6f2eb104ffde28725:Assets/Modern Weapons Pack/ACOG Sight/FBX/Materials/ACOG Diffuse + Specular.mat.meta
   userData: 
   assetBundleName: 
   assetBundleVariant: 

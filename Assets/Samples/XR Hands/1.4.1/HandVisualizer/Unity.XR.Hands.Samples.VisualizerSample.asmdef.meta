@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Packages/com.singularitygroup.hotreload/Editor/SingularityGroup.HotReload.Editor.asmdef.meta
-guid: c5118bdfabf24974f88751fdfade9dba
-========
 guid: 60e576d96416ac94182fe26f63acf9ff
->>>>>>>> 6b3ad7fcad08831360731dd93b4d24dbe4aefd16:Assets/Samples/XR Hands/1.4.1/HandVisualizer/Unity.XR.Hands.Samples.VisualizerSample.asmdef.meta
 AssemblyDefinitionImporter:
   externalObjects: {}
   userData: 

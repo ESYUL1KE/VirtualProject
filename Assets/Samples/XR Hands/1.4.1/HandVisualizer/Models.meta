@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/00.Main.meta
-<<<<<<<< HEAD:Assets/FlamingSands.meta
-guid: 1da32c3425e5dfc44a79b5dd38f117b9
-========
-guid: 15875794997e6f646879dd9acf6f1a6c
->>>>>>>> e8d2a8ca5792428d12ee6d8e3c8ab935c72812f4:Assets/Samples/XR Hands/1.4.1/HandVisualizer/Models.meta
-========
-guid: dcd21bea85946a34580aca8a2a4c24ad
->>>>>>>> 6b3ad7fcad08831360731dd93b4d24dbe4aefd16:Assets/FlamingSands.meta
+guid: 22f58ef53b57ffc4390fa3fd82468a7d
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
