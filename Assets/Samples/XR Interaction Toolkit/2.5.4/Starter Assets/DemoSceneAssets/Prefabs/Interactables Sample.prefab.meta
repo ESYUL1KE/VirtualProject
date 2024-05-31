@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Samples/XR Interaction Toolkit/2.5.4/Starter Assets/DemoSceneAssets/Prefabs/UI/Scroll UI Sample.prefab.meta
-guid: e64a384e3854cfe42973f5e6f9caaf23
-========
 guid: 6821e1b7f44d8c44b8a2ba02f37309d5
->>>>>>>> e8d2a8ca5792428d12ee6d8e3c8ab935c72812f4:Assets/Samples/XR Interaction Toolkit/2.5.4/Starter Assets/DemoSceneAssets/Prefabs/Interactables Sample.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

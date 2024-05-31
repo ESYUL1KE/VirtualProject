@@ -34,6 +34,7 @@ public class Explosion : MonoBehaviour
         {
             Boom();
             isExplode = true;
+            Destroy(gameObject);
         }
     }
 
