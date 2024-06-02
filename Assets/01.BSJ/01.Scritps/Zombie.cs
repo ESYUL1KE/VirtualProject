@@ -33,23 +33,33 @@ public class Zombie : MonoBehaviour
 
             if (distanceToTarget < zombieData.DetectionRagne)
             {
-                anim.SetInteger("State", 2); // Walk
-                navMeshAgent.SetDestination(target.position);
-
                 if (distanceToTarget < zombieData.AttackRange)
                 {
+                    navMeshAgent.isStopped = true;
                     anim.SetInteger("State", 1); // Attack
+                }
+                else
+                {
+                    anim.SetInteger("State", 2); // Walk
+                    navMeshAgent.SetDestination(target.position);
                 }
             }
             else
             {
                 anim.SetInteger("State", 0); // Idle
+                navMeshAgent.isStopped = true;
             }
         }
         else
         {
             anim.SetBool("Live", false);
+            navMeshAgent.isStopped = true;
         }
+    }
+
+    public void ZombieMoveAniEvent()
+    {
+        navMeshAgent.isStopped = false;
     }
 
     //private void FreezeVelocity()
