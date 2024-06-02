@@ -5,12 +5,12 @@ using UnityEngine.AI;
 
 public class Zombie : MonoBehaviour
 {
-    public Transform target;
-    public float zombieRange = 5f;
-
     NavMeshAgent navMeshAgent;
     Rigidbody rigid;
     Animator anim;
+
+    public Transform target;
+    public ZombidData zombieData;
 
     private void Awake()
     {
@@ -19,31 +19,57 @@ public class Zombie : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        navMeshAgent.speed = zombieData.Speed;
+        zombieData.Hp = zombieData.MaxHp;
+    }
+
     private void Update()
     {
-        if (navMeshAgent.remainingDistance < zombieRange)
+        if (zombieData.Hp > 0)
         {
-            navMeshAgent.SetDestination(target.position);
-            anim.SetInteger("State", 2);    // Walk
-        }
-        else if (navMeshAgent.remainingDistance < 0.1f)
-        {
-            anim.SetInteger("State", 1);    // Attack
+            float distanceToTarget = Vector3.Distance(transform.position, target.position);
+
+            if (distanceToTarget < zombieData.DetectionRagne)
+            {
+                if (distanceToTarget < zombieData.AttackRange)
+                {
+                    navMeshAgent.isStopped = true;
+                    anim.SetInteger("State", 1); // Attack
+                }
+                else
+                {
+                    anim.SetInteger("State", 2); // Walk
+                    navMeshAgent.SetDestination(target.position);
+                }
+            }
+            else
+            {
+                anim.SetInteger("State", 0); // Idle
+                navMeshAgent.isStopped = true;
+            }
         }
         else
         {
-            anim.SetInteger("State", 0);    // Idle
+            anim.SetBool("Live", false);
+            navMeshAgent.isStopped = true;
         }
     }
 
-    private void FreezeVelocity()
+    public void ZombieMoveAniEvent()
     {
-        rigid.velocity = Vector3.zero;
-        rigid.angularVelocity = Vector3.zero;
+        navMeshAgent.isStopped = false;
     }
 
-    private void FixedUpdate()
-    {
-        FreezeVelocity();
-    }
+    //private void FreezeVelocity()
+    //{
+    //    rigid.velocity = Vector3.zero;
+    //    rigid.angularVelocity = Vector3.zero;
+    //}
+
+    //private void FixedUpdate()
+    //{
+    //    FreezeVelocity();
+    //}
 }
