@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Packages/com.singularitygroup.hotreload/Runtime/Demo/Scenes/HotReloadBurstDemo.unity.meta
+guid: 75afb38fa92a08648b95d98c3c824758
+========
+guid: 3ff35cecbcc52cc42945cf531638a60a
+>>>>>>>> 6b3ad7fcad08831360731dd93b4d24dbe4aefd16:Assets/Samples/XR Interaction Toolkit/2.5.4/Hands Interaction Demo/HandsDemoScene.unity.meta
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

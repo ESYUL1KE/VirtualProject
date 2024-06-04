@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Packages/com.singularitygroup.hotreload/Editor/CLI/StartArgs.cs.meta
+guid: 320d7824ea07ff046aeab39224861761
+========
+guid: 2124180b09509f3448fae2507dfe9609
+>>>>>>>> 6b3ad7fcad08831360731dd93b4d24dbe4aefd16:Assets/Scripts/AnimateHandOnInput.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

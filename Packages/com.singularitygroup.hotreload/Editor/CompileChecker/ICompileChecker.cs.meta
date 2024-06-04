@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Packages/com.singularitygroup.hotreload/Editor/CompileChecker/ICompileChecker.cs.meta
+guid: a79678ee8c82f924596e66aedffc03ea
+========
+guid: ac5903b776721d74786a2e43f00b949a
+>>>>>>>> 6b3ad7fcad08831360731dd93b4d24dbe4aefd16:Assets/Samples/XR Hands/1.4.1/HandVisualizer/Scripts/HandProcessor.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
