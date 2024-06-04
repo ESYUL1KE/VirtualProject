@@ -72,6 +72,8 @@
     <Compile Include="Assets\03.KMH\01.Scritps\Gun.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\ProximityActivate.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\AnimateHandOnInput.cs" />
+    <Compile Include="Assets\03.KMH\01.Scritps\Right.cs" />
+    <Compile Include="Assets\01.BSJ\01.Scritps\ZombieData.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\ZombieData.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\Flashlight.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\SimpleCharacterMotor.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="Assets\Scripts\GrenadeThrower.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Ramps\Runtime\RampAsset.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
+    <Compile Include="Assets\03.KMH\01.Scritps\GunController.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\Action\XRI Default Input Actions.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +151,14 @@
     </Reference>
     <Reference Include="UnityEngine.ClothModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterInputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterRendererModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.ContentLoadModule">
@@ -360,6 +371,10 @@
     </Reference>
     <Reference Include="UnityEngine.VideoModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\Managed\UnityEngine\UnityEngine.VirtualTexturingModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
