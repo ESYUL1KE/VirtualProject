@@ -9,17 +9,20 @@ public class GunController : MonoBehaviour
 
     private float currentFireRate; // 발사와 발사 사이의 시간
 
-    public Transform muzzleTransform; // 총구 위치
+    public Transform firePosition; // 총구 위치
 
     private RaycastHit hitInfo;
 
-    [SerializeField]
-    private Camera theCam;  // 카메라 시점에서 정 중앙에 발사할 거라서
-
     private AudioSource audioSource;  // 발사 소리
+
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.DrawLine(firePosition.transform.position, Vector3.forward * 5, Color.blue, 3f);
+        }
+
         GunFireRateCalc();
         TryFire();
     }
@@ -59,17 +62,17 @@ public class GunController : MonoBehaviour
     private void Hit()
     {
         // 총구 위치에서 레이캐스트 발사
-        Vector3 rayOrigin = muzzleTransform.position;
-        Vector3 rayDirection = muzzleTransform.forward;
-        if (Physics.Raycast(rayOrigin, rayDirection, out hitInfo, currentGun.range))
+        Vector3 rayOrigin = firePosition.position;
+        Vector3 rayDirection = firePosition.forward;
+       /* if (Physics.Raycast(firePosition.transform.position, rayDirection, out hitInfo, currentGun.range))
         {
             Debug.Log(hitInfo.transform.name);
-            Debug.DrawLine(rayOrigin, hitInfo.point, Color.red, 1.0f);  // 레이 원점에서 히트 포인트까지 빨간색 선을 그림
+            Debug.DrawLine(firePosition.transform.position, hitInfo.point, Color.red, 1.0f);  // 레이 원점에서 히트 포인트까지 빨간색 선을 그림
         }
         else
         {
-            Debug.DrawLine(rayOrigin, rayOrigin + rayDirection * currentGun.range, Color.red, 1.0f);  // 레이 원점에서 최대 거리까지 빨간색 선을 그림
-        }
+            Debug.DrawLine(firePosition.transform.position, rayDirection + firePosition.transform.forward * currentGun.range, Color.red, 1.0f);  // 레이 원점에서 최대 거리까지 빨간색 선을 그림
+        }*/
     }
 
     private void PlaySE(AudioClip _clip)  // 발사 소리 재생

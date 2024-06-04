@@ -20,12 +20,12 @@ public class Gun : MonoBehaviour
     public int maxBulletCount;      // 총알 최대 보유 개수
     public int carryBulletCount;    // 현재 총 바깥에서 소유하고 있는 총알의 총 개수
 
-    public float retroActionForce;  // 반동 세기. 총의 종류마다 다름.
-    public float retroActionFineSightForce; // 정조준시 반동 세기. 총의 종류마다 다름.
+    public float retroActionForce;  // 반동 세기
+    public float retroActionFineSightForce; // 정조준시 반동 세기
 
-    public Vector3 findSightOriginPos;  // 정조준시 총이 향할 위치. 정조준 할 때 총의 위치가 변하니까 그 때의 위치!
+    public Vector3 findSightOriginPos;  // 정조준시 총이 향할 위치
 
     public Animator anim;   // 총의 애니메이션을 재생할 애니메이터 컴포넌트
-    public ParticleSystem muzzleFlash;  // 화염구 이펙트 재생을 담당할 파티클 시스템 컴포넌트
+    public ParticleSystem muzzleFlash;  // 화염구 이펙트 재생 파티클 시스템 컴포넌트
     public AudioClip fire_Sound;    // 총 발사 소리 오디오 클립
 }
