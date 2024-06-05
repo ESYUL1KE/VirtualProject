@@ -1,22 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Zombie : MonoBehaviour
 {
     NavMeshAgent navMeshAgent;
-    Rigidbody rigid;
     Animator anim;
 
     public Transform target;
     public ZombidData zombieData;
 
+    ZombieAniState state;
+
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
-        rigid = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+
+        navMeshAgent.updatePosition = false;
+        navMeshAgent.updateRotation = false;
     }
 
     private void Start()
@@ -31,30 +35,43 @@ public class Zombie : MonoBehaviour
         {
             float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
+            navMeshAgent.SetDestination(target.position);
+            navMeshAgent.updateRotation = true;
+            navMeshAgent.updatePosition = false;
+
             if (distanceToTarget < zombieData.DetectionRagne)
             {
                 if (distanceToTarget < zombieData.AttackRange)
                 {
-                    navMeshAgent.isStopped = true;
-                    anim.SetInteger("State", 1); // Attack
+                    MoveStop();
+                    StateAnim(ZombieAniState.Attack);    // Attack
                 }
                 else
                 {
-                    anim.SetInteger("State", 2); // Walk
+                    navMeshAgent.isStopped = false;
+                    navMeshAgent.updatePosition = true;
+                    StateAnim(ZombieAniState.Run); // Walk
                     navMeshAgent.SetDestination(target.position);
                 }
             }
             else
             {
-                anim.SetInteger("State", 0); // Idle
-                navMeshAgent.isStopped = true;
+                StateAnim(ZombieAniState.Idle);    // Idle
+                MoveStop();
             }
         }
         else
         {
-            anim.SetBool("Live", false);
-            navMeshAgent.isStopped = true;
+            StateAnim(ZombieAniState.Die);
+            MoveStop();
+            navMeshAgent.updatePosition = false;
         }
+    }
+
+    private void MoveStop()
+    {
+        navMeshAgent.isStopped = true;
+        navMeshAgent.updateRotation = false;
     }
 
     public void ZombieMoveAniEvent()
@@ -62,14 +79,50 @@ public class Zombie : MonoBehaviour
         navMeshAgent.isStopped = false;
     }
 
-    //private void FreezeVelocity()
-    //{
-    //    rigid.velocity = Vector3.zero;
-    //    rigid.angularVelocity = Vector3.zero;
-    //}
+    public void GetHit(int damage)
+    {
+        navMeshAgent.updateRotation = false;
+        navMeshAgent.updatePosition = false;
 
-    //private void FixedUpdate()
-    //{
-    //    FreezeVelocity();
-    //}
+        Zombie zombie = gameObject.GetComponent<Zombie>();
+        zombie.zombieData.Hp -= damage;
+        StateAnim(ZombieAniState.GetHit);
+    }
+
+    public int TakeDamage()
+    {
+        Zombie zombie = gameObject.GetComponent<Zombie>();
+        int damage = zombie.zombieData.Damage;
+
+        return damage;
+    }
+
+    public void Animinit()
+    {
+        StateAnim(ZombieAniState.Idle);
+        navMeshAgent.updateRotation = true;
+        navMeshAgent.updatePosition = true;
+    }
+
+    private void StateAnim(ZombieAniState zombieState)
+    {
+        if (zombieState == ZombieAniState.Die)
+        {
+            anim.SetBool("Live", false);
+        }
+        else
+        {
+            state = zombieState;
+            anim.SetInteger("State", (int)state);
+        }
+    }
+
+    private enum ZombieAniState
+    {
+        Idle = 0,
+        Attack = 1,
+        Run = 2,
+        GetHit = 3,
+        Die
+    }
 }
