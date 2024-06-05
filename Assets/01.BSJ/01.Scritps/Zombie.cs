@@ -45,12 +45,14 @@ public class Zombie : MonoBehaviour
                 {
                     MoveStop();
                     StateAnim(ZombieAniState.Attack);    // Attack
+                    SoundManager.instance.PlaySoundEffect("Z_Attack");
                 }
                 else
                 {
                     navMeshAgent.isStopped = false;
                     navMeshAgent.updatePosition = true;
-                    StateAnim(ZombieAniState.Run); // Walk
+                    StateAnim(ZombieAniState.Walk); // Walk
+                    SoundManager.instance.PlaySoundEffect("Z_Move");
                     navMeshAgent.SetDestination(target.position);
                 }
             }
@@ -62,16 +64,16 @@ public class Zombie : MonoBehaviour
         }
         else
         {
-            StateAnim(ZombieAniState.Die);
             MoveStop();
-            navMeshAgent.updatePosition = false;
+            StateAnim(ZombieAniState.Die);
+            SoundManager.instance.PlaySoundEffect("Z_Die");
         }
     }
 
     private void MoveStop()
     {
         navMeshAgent.isStopped = true;
-        navMeshAgent.updateRotation = false;
+        navMeshAgent.updatePosition = false;
     }
 
     public void ZombieMoveAniEvent()
@@ -87,6 +89,8 @@ public class Zombie : MonoBehaviour
         Zombie zombie = gameObject.GetComponent<Zombie>();
         zombie.zombieData.Hp -= damage;
         StateAnim(ZombieAniState.GetHit);
+
+        SoundManager.instance.PlaySoundEffect("Z_Hurt");
     }
 
     public int TakeDamage()
@@ -121,7 +125,7 @@ public class Zombie : MonoBehaviour
     {
         Idle = 0,
         Attack = 1,
-        Run = 2,
+        Walk = 2,
         GetHit = 3,
         Die
     }
