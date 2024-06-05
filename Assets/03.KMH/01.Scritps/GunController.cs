@@ -18,10 +18,10 @@ public class GunController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+/*        if (Input.GetMouseButtonDown(0))
         {
             Debug.DrawLine(firePosition.transform.position, Vector3.forward * 5, Color.blue, 3f);
-        }
+        }*/
 
         GunFireRateCalc();
         TryFire();
@@ -63,16 +63,16 @@ public class GunController : MonoBehaviour
     {
         // 총구 위치에서 레이캐스트 발사
         Vector3 rayOrigin = firePosition.position;
-        Vector3 rayDirection = firePosition.forward;
-       /* if (Physics.Raycast(firePosition.transform.position, rayDirection, out hitInfo, currentGun.range))
+        Vector3 rayDirection = firePosition.TransformDirection(firePosition.forward * 10);
+        if (Physics.Raycast(firePosition.transform.position, rayDirection, out hitInfo, currentGun.range))
         {
             Debug.Log(hitInfo.transform.name);
-            Debug.DrawLine(firePosition.transform.position, hitInfo.point, Color.red, 1.0f);  // 레이 원점에서 히트 포인트까지 빨간색 선을 그림
+            Debug.DrawRay(firePosition.transform.position, hitInfo.point, Color.red, 1.0f);  // 레이 원점에서 히트 포인트까지 빨간색 선을 그림
         }
         else
         {
-            Debug.DrawLine(firePosition.transform.position, rayDirection + firePosition.transform.forward * currentGun.range, Color.red, 1.0f);  // 레이 원점에서 최대 거리까지 빨간색 선을 그림
-        }*/
+            Debug.DrawRay(firePosition.position, rayDirection + firePosition.transform.forward * currentGun.range, Color.red, 1.0f);  // 레이 원점에서 최대 거리까지 빨간색 선을 그림
+        }
     }
 
     private void PlaySE(AudioClip _clip)  // 발사 소리 재생
