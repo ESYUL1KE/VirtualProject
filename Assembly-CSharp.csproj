@@ -65,12 +65,15 @@
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Asset\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DrawerMech.cs" />
     <Compile Include="Assets\Asset\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DoorMech.cs" />
+    <Compile Include="Assets\04.LCH\01.Scritps\AnimateActionHands.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\Zombie.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\ProximityActivate.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\AnimateHandOnInput.cs" />
+    <Compile Include="Assets\01.BSJ\01.Scritps\ZombieData.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\SimpleCharacterMotor.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\AdjustTimeScale.cs" />
     <Compile Include="Assets\04.LCH\01.Scritps\Explosion.cs" />
+    <Compile Include="Assets\Scripts\GrenadeThrower.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Ramps\Runtime\RampAsset.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\Action\XRI Default Input Actions.cs" />
