@@ -15,6 +15,6 @@ MonoBehaviour:
   Hp: 100
   MaxHp: 100
   Damage: 4
-  Speed: 2
+  Speed: 1
   DetectionRagne: 5
   AttackRange: 1
