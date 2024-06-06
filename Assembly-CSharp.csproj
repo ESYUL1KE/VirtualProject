@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\03.KMH\01.Scritps\Hand.cs" />
+    <Compile Include="Assets\01.BSJ\01.Scritps\Zombie\Event\ZombieAnimationEvent.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\TriggerEvent.cs" />
     <Compile Include="Assets\02.CSH\01.Scritps\UIManager.cs" />
@@ -68,13 +69,13 @@
     <Compile Include="Assets\Asset\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DrawerMech.cs" />
     <Compile Include="Assets\Asset\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DoorMech.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\SoundManager.cs" />
+    <Compile Include="Assets\01.BSJ\01.Scritps\Zombie\Sound\ZombieSound.cs" />
     <Compile Include="Assets\04.LCH\01.Scritps\AnimateActionHands.cs" />
-    <Compile Include="Assets\01.BSJ\01.Scritps\Zombie.cs" />
     <Compile Include="Assets\03.KMH\01.Scritps\Gun.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\ProximityActivate.cs" />
+    <Compile Include="Assets\01.BSJ\01.Scritps\Zombie\Zombie.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\AnimateHandOnInput.cs" />
     <Compile Include="Assets\03.KMH\01.Scritps\Right.cs" />
-    <Compile Include="Assets\01.BSJ\01.Scritps\ZombieData.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\Flashlight.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\SimpleCharacterMotor.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\AdjustTimeScale.cs" />
