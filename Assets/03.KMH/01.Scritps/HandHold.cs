@@ -16,7 +16,7 @@ public class HandHold : XRBaseInteractable
     {
         base.Awake();
         onSelectEntered.AddListener(Grab);
-        //onSelectExit.
+/*        onSelectExit.*/
     }
 
     private void OnDestroy()
