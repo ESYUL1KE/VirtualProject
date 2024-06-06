@@ -60,22 +60,33 @@
     <Analyzer Include="C:\Program Files\Unity 2022.3.14f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\03.KMH\01.Scritps\Hand.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\01.BSJ\01.Scritps\TriggerEvent.cs" />
     <Compile Include="Assets\02.CSH\01.Scritps\UIManager.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Asset\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DrawerMech.cs" />
     <Compile Include="Assets\Asset\FreeOpenBuilding_1.1.2\FOB_1\Scripts\DoorMech.cs" />
+    <Compile Include="Assets\01.BSJ\01.Scritps\SoundManager.cs" />
     <Compile Include="Assets\04.LCH\01.Scritps\AnimateActionHands.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\Zombie.cs" />
+    <Compile Include="Assets\03.KMH\01.Scritps\Gun.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\ProximityActivate.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\AnimateHandOnInput.cs" />
+    <Compile Include="Assets\03.KMH\01.Scritps\Right.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\ZombieData.cs" />
+    <Compile Include="Assets\01.BSJ\01.Scritps\Flashlight.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\SimpleCharacterMotor.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\AdjustTimeScale.cs" />
     <Compile Include="Assets\04.LCH\01.Scritps\Explosion.cs" />
+    <Compile Include="Assets\03.KMH\01.Scritps\HandHold.cs" />
+    <Compile Include="Assets\03.KMH\01.Scritps\GripHold.cs" />
     <Compile Include="Assets\Scripts\GrenadeThrower.cs" />
+    <Compile Include="Assets\fire.cs" />
+    <Compile Include="Assets\03.KMH\01.Scritps\Weapon.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Ramps\Runtime\RampAsset.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
+    <Compile Include="Assets\03.KMH\01.Scritps\GunController.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\Action\XRI Default Input Actions.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -100,6 +111,7 @@
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Asset\Particle\ParticlePack\EffectExamples\Misc Effects\Shaders\FireFly.shader" />
     <None Include="Assets\Asset\FreeOpenBuilding_1.1.2\Important Info!.txt" />
+    <None Include="Assets\Asset\SkySeries Freebie\Hdri setup.txt" />
     <None Include="Assets\Asset\FreeOpenBuilding_1.1.2\FOB_Props\Texture\UseTextureFromBuildingFolder.txt" />
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />

@@ -16,7 +16,7 @@ public class Weapon : XRGrabInteractable
         base.Awake();
         SetupHolds();
 
-        onSelectEnter.AddListener(SetInitialRotation);
+        onSelectEntered.AddListener(SetInitialRotation);
     }
 
     private void SetupHolds()
@@ -32,7 +32,7 @@ public class Weapon : XRGrabInteractable
 
     private void OnDestroy()
     {
-        onSelectEnter.RemoveListener(SetInitialRotation);
+        onSelectEntered.RemoveListener(SetInitialRotation);
     }
 
     private void SetInitialRotation(XRBaseInteractor interactor)

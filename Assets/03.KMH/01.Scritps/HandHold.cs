@@ -15,8 +15,8 @@ public class HandHold : XRBaseInteractable
     protected override void Awake()
     {
         base.Awake();
-        onSelectEnter.AddListener(Grab);
-        onSelectExit.
+        onSelectEntered.AddListener(Grab);
+        //onSelectExit.
     }
 
     private void OnDestroy()
