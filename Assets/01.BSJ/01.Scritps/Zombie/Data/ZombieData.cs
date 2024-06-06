@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ZombieData", menuName = "ScriptableObject/ZombieData", order = 1)]
-public class ZombidData : ScriptableObject
+public class ZombieData : ScriptableObject
 {
     public int Hp;
     public int MaxHp = 100;

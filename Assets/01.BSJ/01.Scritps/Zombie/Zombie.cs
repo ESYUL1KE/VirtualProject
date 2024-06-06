@@ -10,7 +10,7 @@ public class Zombie : MonoBehaviour
     Animator anim;
 
     public Transform target;
-    public ZombidData zombieData;
+    public ZombieData zombieData;
 
     ZombieAniState state;
 
@@ -45,14 +45,12 @@ public class Zombie : MonoBehaviour
                 {
                     MoveStop();
                     StateAnim(ZombieAniState.Attack);    // Attack
-                    SoundManager.instance.PlaySoundEffect("Z_Attack");
                 }
                 else
                 {
                     navMeshAgent.isStopped = false;
                     navMeshAgent.updatePosition = true;
                     StateAnim(ZombieAniState.Walk); // Walk
-                    SoundManager.instance.PlaySoundEffect("Z_Move");
                     navMeshAgent.SetDestination(target.position);
                 }
             }
@@ -66,7 +64,6 @@ public class Zombie : MonoBehaviour
         {
             MoveStop();
             StateAnim(ZombieAniState.Die);
-            SoundManager.instance.PlaySoundEffect("Z_Die");
         }
     }
 
@@ -76,9 +73,11 @@ public class Zombie : MonoBehaviour
         navMeshAgent.updatePosition = false;
     }
 
-    public void ZombieMoveAniEvent()
+    public void ZombieMovePossible()
     {
         navMeshAgent.isStopped = false;
+        navMeshAgent.updatePosition = true;
+        navMeshAgent.updateRotation = true;
     }
 
     public void GetHit(int damage)
@@ -89,8 +88,6 @@ public class Zombie : MonoBehaviour
         Zombie zombie = gameObject.GetComponent<Zombie>();
         zombie.zombieData.Hp -= damage;
         StateAnim(ZombieAniState.GetHit);
-
-        SoundManager.instance.PlaySoundEffect("Z_Hurt");
     }
 
     public int TakeDamage()
