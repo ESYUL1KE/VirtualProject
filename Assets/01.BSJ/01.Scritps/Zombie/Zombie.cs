@@ -6,11 +6,19 @@ using UnityEngine.AI;
 
 public class Zombie : MonoBehaviour
 {
-    NavMeshAgent navMeshAgent;
-    Animator anim;
+    private NavMeshAgent navMeshAgent;
+    private Animator anim;
 
     public Transform target;
-    public ZombieData zombieData;
+
+    private int hp;
+    public int maxHp = 100;
+    public int damage = 20;
+    public int speed = 2;
+    public int detectionRagne = 5;
+    public int attackRange = 1;
+
+    private bool isLive = true;
 
     ZombieAniState state;
 
@@ -25,23 +33,28 @@ public class Zombie : MonoBehaviour
 
     private void Start()
     {
-        navMeshAgent.speed = zombieData.Speed;
-        zombieData.Hp = zombieData.MaxHp;
+        navMeshAgent.speed = speed;
+        hp = maxHp;
     }
 
     private void Update()
     {
-        if (zombieData.Hp > 0)
+        if (hp > 0 && isLive)
         {
+            if (Input.GetKeyUp(KeyCode.D) && isLive)
+            {
+                GetHit(100);
+            }
+
             float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
             navMeshAgent.SetDestination(target.position);
             navMeshAgent.updateRotation = true;
             navMeshAgent.updatePosition = false;
 
-            if (distanceToTarget < zombieData.DetectionRagne)
+            if (distanceToTarget < detectionRagne)
             {
-                if (distanceToTarget < zombieData.AttackRange)
+                if (distanceToTarget < attackRange)
                 {
                     MoveStop();
                     StateAnim(ZombieAniState.Attack);    // Attack
@@ -60,11 +73,6 @@ public class Zombie : MonoBehaviour
                 MoveStop();
             }
         }
-        else
-        {
-            MoveStop();
-            StateAnim(ZombieAniState.Die);
-        }
     }
 
     private void MoveStop()
@@ -82,19 +90,37 @@ public class Zombie : MonoBehaviour
 
     public void GetHit(int damage)
     {
+        if (!isLive)
+            return;
+
         navMeshAgent.updateRotation = false;
         navMeshAgent.updatePosition = false;
 
-        Zombie zombie = gameObject.GetComponent<Zombie>();
-        zombie.zombieData.Hp -= damage;
-        StateAnim(ZombieAniState.GetHit);
+        hp -= damage;
+
+        if (hp > 0 && isLive)
+        {
+            StateAnim(ZombieAniState.GetHit);
+        }
+        else
+        {
+            hp = 0;
+            isLive = false;
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        if (isLive)
+            return;
+
+        MoveStop();
+        StateAnim(ZombieAniState.Die);
     }
 
     public int TakeDamage()
     {
-        Zombie zombie = gameObject.GetComponent<Zombie>();
-        int damage = zombie.zombieData.Damage;
-
         return damage;
     }
 
