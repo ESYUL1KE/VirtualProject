@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GunController : MonoBehaviour
 {
+    public InputActionAsset inputActionAsset;
+
     [SerializeField]
     public Gun currentGun;
 
@@ -17,16 +20,20 @@ public class GunController : MonoBehaviour
 
     private LineRenderer lineRenderer;  // 레이캐스트 시각화를 위한 라인 렌더러
 
+    private InputAction triggerAction; // 오른쪽 컨트롤러의 트리거 액션
+
+    void Start()
+    {
+        triggerAction = inputActionAsset.actionMaps[5].actions[2];
+        triggerAction.Enable();
+    }
 
     void Update()
     {
-/*        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.DrawLine(firePosition.transform.position, Vector3.forward * 5, Color.blue, 3f);
-        }*/
+        var rightContTrigger = triggerAction.ReadValue<float>();
 
         GunFireRateCalc();
-        TryFire();
+        TryFire(rightContTrigger);
     }
 
     private void GunFireRateCalc()
@@ -35,9 +42,9 @@ public class GunController : MonoBehaviour
             currentFireRate -= Time.deltaTime;  // 1초에 1씩 감소시킨다.
     }
 
-    private void TryFire()  // 발사 입력을 받음
+    private void TryFire(float triggerValue)  // 발사 입력을 받음
     {
-        if (Input.GetButton("Fire1") && currentFireRate <= 0)
+        if (triggerValue > 0.1f && currentFireRate <= 0)  // 0.1은 노이즈를 걸러내기 위한 임계값
         {
             Fire();
         }
