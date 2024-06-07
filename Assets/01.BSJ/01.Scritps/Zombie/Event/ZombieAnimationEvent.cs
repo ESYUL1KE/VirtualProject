@@ -31,4 +31,9 @@ public class ZombieAnimationEvent : MonoBehaviour
     {
         zombieSound.PlaySoundEffect("Z_Die");
     }
+
+    public void DieEvent()
+    {
+        gameObject.SetActive(false);
+    }
 }
