@@ -109,6 +109,4 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene("CSH");
     }
-
-
 }

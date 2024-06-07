@@ -91,7 +91,6 @@
     <Compile Include="Assets\03.KMH\01.Scritps\Weapon.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Ramps\Runtime\RampAsset.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\EffectExamples\Misc Effects\Scripts\SpawnEffect.cs" />
-    <Compile Include="Assets\01.BSJ\01.Scritps\Zombie\Data\ZombieData.cs" />
     <Compile Include="Assets\ProgressBar\Scene\Demo.cs" />
     <Compile Include="Assets\FireBulletOnActivate.cs" />
     <Compile Include="Assets\03.KMH\01.Scritps\GunController.cs" />
