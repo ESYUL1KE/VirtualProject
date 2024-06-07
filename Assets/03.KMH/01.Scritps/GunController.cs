@@ -15,6 +15,8 @@ public class GunController : MonoBehaviour
 
     private AudioSource audioSource;  // 발사 소리
 
+    private LineRenderer lineRenderer;  // 레이캐스트 시각화를 위한 라인 렌더러
+
 
     void Update()
     {
@@ -67,11 +69,11 @@ public class GunController : MonoBehaviour
         if (Physics.Raycast(firePosition.transform.position, rayDirection, out hitInfo, currentGun.range))
         {
             Debug.Log(hitInfo.transform.name);
-            Debug.DrawRay(firePosition.transform.position, hitInfo.point, Color.red, 1.0f);  // 레이 원점에서 히트 포인트까지 빨간색 선을 그림
+            Debug.DrawLine(firePosition.transform.position, hitInfo.point, Color.red, 1.0f);  // 레이 원점에서 히트 포인트까지 빨간색 선을 그림
         }
         else
         {
-            Debug.DrawRay(firePosition.position, rayDirection + firePosition.transform.forward * currentGun.range, Color.red, 1.0f);  // 레이 원점에서 최대 거리까지 빨간색 선을 그림
+            Debug.DrawLine(firePosition.position, rayDirection + firePosition.transform.forward * currentGun.range, Color.red, 1.0f);  // 레이 원점에서 최대 거리까지 빨간색 선을 그림
         }
     }
 
