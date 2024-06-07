@@ -4,14 +4,25 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
+public enum ZombieAniState
+{
+    Idle = 0,
+    Attack = 1,
+    Walk = 2,
+    Hurt = 3,
+    Die
+}
+
 public class Zombie : MonoBehaviour
 {
     private NavMeshAgent navMeshAgent;
     private Animator anim;
+    private Rigidbody rb;
+    private ZombieSound zombieSound;
 
     public Transform target;
 
-    private int hp;
+    [SerializeField] private int hp;
     public int maxHp = 100;
     public int damage = 20;
     public int speed = 2;
@@ -21,137 +32,133 @@ public class Zombie : MonoBehaviour
     private bool isLive = true;
 
     ZombieAniState state;
-    Rigidbody rigid;
 
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
-        rigid = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
+        zombieSound = GetComponent<ZombieSound>();
 
-        navMeshAgent.updatePosition = false;
-        navMeshAgent.updateRotation = false;
-    }
+        this.navMeshAgent.updatePosition = false;
+        this.navMeshAgent.updateRotation = false;
 
-    private void Start()
-    {
-        navMeshAgent.speed = speed;
+        this.navMeshAgent.speed = speed;
         hp = maxHp;
+
+        StateAnim(ZombieAniState.Idle);
     }
+
 
     private void Update()
     {
+        rb.velocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        
         if (hp > 0 && isLive)
         {
-            if (Input.GetKeyUp(KeyCode.D) && isLive)
-            {
-                GetHit(100);
-            }
-
             float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-            navMeshAgent.SetDestination(target.position);
-            navMeshAgent.updateRotation = true;
-            navMeshAgent.updatePosition = false;
+            MoveStop();
 
             if (distanceToTarget < detectionRagne)
             {
                 if (distanceToTarget < attackRange)
                 {
-                    MoveStop();
                     StateAnim(ZombieAniState.Attack);    // Attack
                 }
                 else
                 {
-                    navMeshAgent.isStopped = false;
-                    navMeshAgent.updatePosition = true;
+                    MovePossible();
                     StateAnim(ZombieAniState.Walk); // Walk
-                    navMeshAgent.SetDestination(target.position);
+                    this.navMeshAgent.SetDestination(target.position);
                 }
             }
-            else
+            else if (state != ZombieAniState.Hurt || state != ZombieAniState.Die)
             {
-                StateAnim(ZombieAniState.Idle);    // Idle
-                MoveStop();
+                StateAnim(ZombieAniState.Idle); // Idle
             }
         }
     }
 
-    private void MoveStop()
+    public void MoveStop()
     {
-        navMeshAgent.isStopped = true;
-        navMeshAgent.updatePosition = false;
+        this.navMeshAgent.isStopped = true;
+        this.navMeshAgent.updatePosition = false;
+        this.navMeshAgent.updateRotation = false;
     }
 
-    public void ZombieMovePossible()
+    public void MovePossible()
     {
-        navMeshAgent.isStopped = false;
-        navMeshAgent.updatePosition = true;
-        navMeshAgent.updateRotation = true;
+        this.navMeshAgent.isStopped = false;
+        this.navMeshAgent.updatePosition = true;
+        this.navMeshAgent.updateRotation = true;
     }
 
     public void GetHit(int damage)
     {
-        if (!isLive)
-            return;
-
-        navMeshAgent.updateRotation = false;
-        navMeshAgent.updatePosition = false;
-
         hp -= damage;
 
-        if (hp > 0 && isLive)
+        if (hp > 0)
         {
-            StateAnim(ZombieAniState.GetHit);
+            StateAnim(ZombieAniState.Hurt);
         }
         else
         {
-            hp = 0;
-            isLive = false;
             Die();
         }
+
+        Debug.Log($"After GetHit - HP: {hp}, IsLive: {isLive}");
     }
 
     public void Die()
     {
-        if (isLive)
-            return;
+        isLive = false;
 
-        MoveStop();
         StateAnim(ZombieAniState.Die);
     }
 
     public int TakeDamage()
     {
+        zombieSound.PlaySoundEffect("Z_Attack");
         return damage;
     }
 
-    public void Animinit()
+    public void AnimationInit()
     {
         StateAnim(ZombieAniState.Idle);
-        navMeshAgent.updateRotation = true;
-        navMeshAgent.updatePosition = true;
     }
 
-    private void StateAnim(ZombieAniState zombieState)
+    public void StateAnim(ZombieAniState zombieState)
     {
-        if (zombieState == ZombieAniState.Die)
+        if (zombieState == ZombieAniState.Die || zombieState == ZombieAniState.Hurt)
         {
-            anim.SetBool("Live", false);
+            MoveStop();
+
+            string aniState;
+            if (zombieState == ZombieAniState.Die)
+                aniState = "Die";
+            else
+                aniState = "Hurt";
+
+            anim.SetTrigger(aniState);
+            return;
         }
         else
         {
             state = zombieState;
-            anim.SetInteger("State", (int)state);
-        }
-    }
 
-    private enum ZombieAniState
-    {
-        Idle = 0,
-        Attack = 1,
-        Walk = 2,
-        GetHit = 3,
-        Die
+            if (zombieState == ZombieAniState.Attack || zombieState == ZombieAniState.Idle)
+            {
+                MoveStop();
+            }
+            else if (zombieState == ZombieAniState.Walk)
+            {
+                MovePossible();
+            }
+
+            anim.SetInteger("State", (int)state);
+            return;
+        }
     }
 }
