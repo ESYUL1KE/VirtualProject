@@ -63,6 +63,7 @@
     <Compile Include="Assets\03.KMH\01.Scritps\Hand.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\Zombie\Event\ZombieAnimationEvent.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\04.LCH\01.Scritps\Player.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\TriggerEvent.cs" />
     <Compile Include="Assets\02.CSH\01.Scritps\UIManager.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\SimpleCameraController.cs" />

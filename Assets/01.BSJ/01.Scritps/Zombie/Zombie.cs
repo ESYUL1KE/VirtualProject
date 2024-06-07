@@ -21,11 +21,13 @@ public class Zombie : MonoBehaviour
     private bool isLive = true;
 
     ZombieAniState state;
+    Rigidbody rigid;
 
     private void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        rigid = GetComponent<Rigidbody>();
 
         navMeshAgent.updatePosition = false;
         navMeshAgent.updateRotation = false;

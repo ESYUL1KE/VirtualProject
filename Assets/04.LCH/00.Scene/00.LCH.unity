@@ -2380,16 +2380,17 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 515494550}
+  - component: {fileID: 515494559}
+  - component: {fileID: 515494554}
   - component: {fileID: 515494558}
   - component: {fileID: 515494557}
   - component: {fileID: 515494556}
   - component: {fileID: 515494555}
-  - component: {fileID: 515494554}
   - component: {fileID: 515494553}
   - component: {fileID: 515494552}
   - component: {fileID: 515494551}
   m_Layer: 6
-  m_Name: XR Origin (XR Rig)
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2404,12 +2405,12 @@ Transform:
   m_GameObject: {fileID: 515494549}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.011223674, y: -11.69, z: 30.334476}
+  m_LocalPosition: {x: -0.8, y: 2.1, z: 39.4}
   m_LocalScale: {x: 1, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1743785354}
-  m_Father: {fileID: 1657323361}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &515494551
 MonoBehaviour:
@@ -2618,8 +2619,29 @@ MonoBehaviour:
   m_Camera: {fileID: 1080330590}
   m_OriginBaseGameObject: {fileID: 515494549}
   m_CameraFloorOffsetObject: {fileID: 1743785353}
-  m_RequestedTrackingOriginMode: 2
+  m_RequestedTrackingOriginMode: 1
   m_CameraYOffset: 1.1176
+--- !u!65 &515494559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515494549}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &546470938
 GameObject:
   m_ObjectHideFlags: 0
@@ -3663,7 +3685,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 515494550}
-  zombieData: {fileID: 11400000, guid: 04a7c268ec94f5845a46ec39ff1b2afc, type: 2}
+  maxHp: 100
+  damage: 20
+  speed: 2
+  detectionRagne: 5
+  attackRange: 1
 --- !u!1001 &976048701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3882,7 +3908,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 515494550}
-  zombieData: {fileID: 11400000, guid: 04a7c268ec94f5845a46ec39ff1b2afc, type: 2}
+  maxHp: 100
+  damage: 20
+  speed: 2
+  detectionRagne: 5
+  attackRange: 1
 --- !u!1001 &979397725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4101,7 +4131,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 515494550}
-  zombieData: {fileID: 11400000, guid: 04a7c268ec94f5845a46ec39ff1b2afc, type: 2}
+  maxHp: 100
+  damage: 20
+  speed: 2
+  detectionRagne: 5
+  attackRange: 1
 --- !u!1001 &997933965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4185,7 +4219,7 @@ GameObject:
   - component: {fileID: 1001385024}
   - component: {fileID: 1001385023}
   m_Layer: 5
-  m_Name: HUD
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4407,11 +4441,11 @@ Transform:
   m_GameObject: {fileID: 1023813185}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.011223674, y: -14.537565, z: -9.92282}
+  m_LocalPosition: {x: -0.8194672, y: -0.8207073, z: -0.857296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1657323361}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1023813187
 MonoBehaviour:
@@ -5334,7 +5368,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 515494550}
-  zombieData: {fileID: 11400000, guid: 04a7c268ec94f5845a46ec39ff1b2afc, type: 2}
+  maxHp: 100
+  damage: 20
+  speed: 2
+  detectionRagne: 5
+  attackRange: 1
 --- !u!1 &1089800887
 GameObject:
   m_ObjectHideFlags: 0
@@ -5681,7 +5719,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 515494550}
-  zombieData: {fileID: 11400000, guid: 04a7c268ec94f5845a46ec39ff1b2afc, type: 2}
+  maxHp: 100
+  damage: 20
+  speed: 2
+  detectionRagne: 5
+  attackRange: 1
 --- !u!1001 &1211934619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5900,7 +5942,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 515494550}
-  zombieData: {fileID: 11400000, guid: 04a7c268ec94f5845a46ec39ff1b2afc, type: 2}
+  maxHp: 100
+  damage: 20
+  speed: 2
+  detectionRagne: 5
+  attackRange: 1
 --- !u!1 &1218486779
 GameObject:
   m_ObjectHideFlags: 0
@@ -5948,7 +5994,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.05
   m_MinRegionArea: 0.1
-  m_NavMeshData: {fileID: 23800000, guid: 7290b3b597c9b3e41af4e55a363517fb, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 974026732550ccc439b2f6465d872f65, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1218486781
 Transform:
@@ -5995,7 +6041,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 4397819f47b4b824d82ee252597c53a5, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: b03b3651a8a12424083150fddd58820f, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &1253130311
 PrefabInstance:
@@ -6166,9 +6212,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253130315}
   serializedVersion: 4
-  m_Mass: 50
+  m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -6219,7 +6265,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 515494550}
-  zombieData: {fileID: 11400000, guid: 04a7c268ec94f5845a46ec39ff1b2afc, type: 2}
+  maxHp: 100
+  damage: 20
+  speed: 2
+  detectionRagne: 5
+  attackRange: 1
 --- !u!1 &1279342015
 GameObject:
   m_ObjectHideFlags: 0
@@ -7855,7 +7905,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 515494550}
-  zombieData: {fileID: 11400000, guid: 04a7c268ec94f5845a46ec39ff1b2afc, type: 2}
+  maxHp: 100
+  damage: 20
+  speed: 2
+  detectionRagne: 5
+  attackRange: 1
 --- !u!195 &1546821065
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8212,9 +8266,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585885328}
   serializedVersion: 4
-  m_Mass: 50
+  m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -8265,7 +8319,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 515494550}
-  zombieData: {fileID: 11400000, guid: 04a7c268ec94f5845a46ec39ff1b2afc, type: 2}
+  maxHp: 100
+  damage: 20
+  speed: 2
+  detectionRagne: 5
+  attackRange: 1
 --- !u!1 &1632622632
 GameObject:
   m_ObjectHideFlags: 0
@@ -8415,39 +8473,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 129621893416964362, guid: 42fa2d3a38040d24185bbe3f21fd8928, type: 3}
   m_PrefabInstance: {fileID: 1647124761}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1657323360
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1657323361}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1657323361
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1657323360}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.83069086, y: 13.716858, z: 9.065524}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 515494550}
-  - {fileID: 1023813186}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1669642946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8666,7 +8691,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 515494550}
-  zombieData: {fileID: 11400000, guid: 04a7c268ec94f5845a46ec39ff1b2afc, type: 2}
+  maxHp: 100
+  damage: 20
+  speed: 2
+  detectionRagne: 5
+  attackRange: 1
 --- !u!1 &1684573432
 GameObject:
   m_ObjectHideFlags: 0
@@ -9756,9 +9785,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998528196}
   serializedVersion: 4
-  m_Mass: 50
+  m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -9788,7 +9817,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 515494550}
-  zombieData: {fileID: 11400000, guid: 04a7c268ec94f5845a46ec39ff1b2afc, type: 2}
+  maxHp: 100
+  damage: 20
+  speed: 2
+  detectionRagne: 5
+  attackRange: 1
 --- !u!195 &1998528203
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10359,7 +10392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1875161217831392945, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.22
+      value: -0.43
       objectReference: {fileID: 0}
     - target: {fileID: 1875161217831392945, guid: 2f9ac039a10be514dbfc03631d59a9c0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11045,7 +11078,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 515494550}
-  zombieData: {fileID: 11400000, guid: 04a7c268ec94f5845a46ec39ff1b2afc, type: 2}
+  maxHp: 100
+  damage: 20
+  speed: 2
+  detectionRagne: 5
+  attackRange: 1
 --- !u!1001 &2123956620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11223,7 +11260,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 823896773}
   - {fileID: 1338401841}
-  - {fileID: 1657323361}
+  - {fileID: 515494550}
+  - {fileID: 1023813186}
   - {fileID: 271389771}
   - {fileID: 339565719}
   - {fileID: 1684573433}
