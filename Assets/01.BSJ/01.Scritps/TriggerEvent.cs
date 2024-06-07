@@ -12,11 +12,11 @@ public class TriggerEvent : MonoBehaviour
         {
             if (gameObject.transform.position.z > player.position.z)
             {
-                player.position = gameObject.transform.position + new Vector3(0f, 0f, 3f);
+                player.position = gameObject.transform.position + new Vector3(0f, 0f, 2.5f);
             }
             else if (gameObject.transform.position.z < player.position.z)
             {
-                player.position = gameObject.transform.position - new Vector3(0f, 0f, 3f);
+                player.position = gameObject.transform.position - new Vector3(0f, 0f, 2.5f);
             }
             Debug.Log("trigger");
         }
