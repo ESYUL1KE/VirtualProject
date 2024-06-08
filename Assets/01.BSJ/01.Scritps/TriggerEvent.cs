@@ -4,21 +4,49 @@ using UnityEngine;
 
 public class TriggerEvent : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
+
+    private void Start()
+    {
+        player = GameObject.Find("Player").transform;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (gameObject.transform.position.z > player.position.z)
+            GameObject door = GameObject.Find("Door_Roof_LOD");
+            if (gameObject.name == door.name)
             {
-                player.position = gameObject.transform.position + new Vector3(0f, 0f, 2.5f);
+                return;
             }
-            else if (gameObject.transform.position.z < player.position.z)
+            else
             {
-                player.position = gameObject.transform.position - new Vector3(0f, 0f, 2.5f);
+                if (gameObject.transform.position.z > player.position.z)
+                {
+                    player.position = gameObject.transform.position + new Vector3(0f, 0f, 2.5f);
+                }
+                else if (gameObject.transform.position.z < player.position.z)
+                {
+                    player.position = gameObject.transform.position - new Vector3(0f, 0f, 2.5f);
+                }
             }
-            Debug.Log("trigger");
+        }
+
+        if (other.gameObject.CompareTag("Key"))
+        {
+            GameObject door = GameObject.Find("Door_Roof_LOD");
+            if (gameObject.name == door.name)
+            {
+                if (gameObject.transform.position.z > player.position.z)
+                {
+                    player.position = gameObject.transform.position + new Vector3(0f, 0f, 2.5f);
+                }
+                else if (gameObject.transform.position.z < player.position.z)
+                {
+                    player.position = gameObject.transform.position - new Vector3(0f, 0f, 2.5f);
+                }
+            }
         }
     }
 }
