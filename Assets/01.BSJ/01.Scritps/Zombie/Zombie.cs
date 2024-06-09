@@ -19,17 +19,21 @@ public class Zombie : MonoBehaviour
     private Animator anim;
     private Rigidbody rb;
     private ZombieSound zombieSound;
+    private Collider col;
 
     public Transform target;
 
-    [SerializeField] private int hp;
+    public int hp;
     public int maxHp = 100;
     public int damage = 20;
     public int speed = 2;
     public int detectionRagne = 5;
     public int attackRange = 1;
+    public float delay = 1f;
+
 
     private bool isLive = true;
+    private bool isAttack = false;
 
     ZombieAniState state;
 
@@ -39,6 +43,7 @@ public class Zombie : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         zombieSound = GetComponent<ZombieSound>();
+        col = GetComponent<Collider>();
 
         this.navMeshAgent.updatePosition = false;
         this.navMeshAgent.updateRotation = false;
@@ -54,7 +59,7 @@ public class Zombie : MonoBehaviour
     {
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
-        
+
         if (hp > 0 && isLive)
         {
             float distanceToTarget = Vector3.Distance(transform.position, target.position);
@@ -63,9 +68,10 @@ public class Zombie : MonoBehaviour
 
             if (distanceToTarget < detectionRagne)
             {
-                if (distanceToTarget < attackRange)
+                if (distanceToTarget < attackRange && !isAttack)
                 {
                     StateAnim(ZombieAniState.Attack);    // Attack
+                    StartCoroutine(TakeDamage(damage));
                 }
                 else
                 {
@@ -107,22 +113,19 @@ public class Zombie : MonoBehaviour
         {
             Die();
         }
-
-        Debug.Log($"After GetHit - HP: {hp}, IsLive: {isLive}");
     }
 
     public void Die()
     {
         isLive = false;
 
+        col.enabled = false;
+
         StateAnim(ZombieAniState.Die);
+
+        Destroy(gameObject, 1f);
     }
 
-    public int TakeDamage()
-    {
-        zombieSound.PlaySoundEffect("Z_Attack");
-        return damage;
-    }
 
     public void AnimationInit()
     {
@@ -160,5 +163,19 @@ public class Zombie : MonoBehaviour
             anim.SetInteger("State", (int)state);
             return;
         }
+    }
+
+    IEnumerator TakeDamage(int damage)
+    {
+        isAttack = true;
+
+        zombieSound.PlaySoundEffect("Z_Attack");
+
+        Player player = target.GetComponent<Player>();
+        player.GetHit(damage);
+
+        yield return new WaitForSecondsRealtime(delay);
+
+        isAttack = false;
     }
 }

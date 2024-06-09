@@ -4,28 +4,36 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float health { get; private set; }
+    public int health;
+    private int maxHealth = 100;
 
     private bool isDead;
 
     private void Awake()
     {
         isDead = false;
+        health = maxHealth;
     }
 
     void Update()
     {
-        
+        Debug.Log("플레이어 현재 체력: " + health);
+
+        if(isDead == true)
+        {
+            Die();
+        }
     }
 
-    void GetHit()
+    public void GetHit(int damage)
     {
-        /*health -= damage;*/
+        // Sound 재생
+
+        health -= damage;
 
         if (health <= 0)
         {
             isDead = true;
-            Die();
         }
     }
 
@@ -33,5 +41,8 @@ public class Player : MonoBehaviour
     {
         if (isDead != true)
             return;
+
+        // Player Die Sound
+        // GameOver UI 생성(GameManager) & Restart
     }
 }

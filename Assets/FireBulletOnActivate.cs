@@ -16,15 +16,12 @@ public class FireBulletOnActivate : MonoBehaviour
         grabble.activated.AddListener(FireBullet);
     }
 
-    void Update()
-    {
-        
-    }
     private void FireBullet(ActivateEventArgs args)
     {
+        // 사운드 재생
         GameObject spawnBullet = Instantiate(bullet);
         spawnBullet.transform.position = firePosition.position;
-        spawnBullet.GetComponent<Rigidbody>().velocity = firePosition.forward * fireSpeed;
+        spawnBullet.GetComponent<Rigidbody>().velocity = (firePosition.forward * -1) * fireSpeed;
         Destroy(spawnBullet,5f);
     }
 }
