@@ -22,10 +22,8 @@ public class Timer : MonoBehaviour
     int min, sec;
 
     //юс╫ц data *****************
-    public int zombiesdata = 0;
     public float timedata = 0;
     //**************************
-    
 
     void Start()
     {
@@ -39,8 +37,6 @@ public class Timer : MonoBehaviour
     {
         if (!isGameEnd && !isGameOver)
         {
-
-
             if (time == 0)
             {
                 isGameOver = true;
@@ -74,37 +70,27 @@ public class Timer : MonoBehaviour
                 }
             }
         }
-
-       
-        
-
-
-
     }
-
     void GameOver()
     {
         gameOverUI.SetActive(true);
         StartCoroutine(ReloadSceneAfterDelay(5f));
     }
 
-    void GameEnd()
+    public void GameEnd()
     {
         int elapsedMin = (int)time / 60;
         int elapsedSec = ((int)time - elapsedMin * 60) % 60;
-        ZombieCount.text = zombiesdata.ToString();
+        ZombieCount.text = GameManager.instance.zombie_Count.ToString();
 
         TimeCountMin.text = elapsedMin.ToString();
         TimeCountSec.text = elapsedMin.ToString();
         gameEndUI.SetActive(true);
     }
 
-
     IEnumerator ReloadSceneAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-
 }

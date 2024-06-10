@@ -36,5 +36,6 @@ public class ZombieAnimationEvent : MonoBehaviour
     public void DieEvent()
     {
         gameObject.SetActive(false);
+        GameManager.instance.zombie_Count++;
     }
 }
