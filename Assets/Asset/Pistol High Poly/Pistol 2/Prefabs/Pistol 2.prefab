@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 464943082049566180}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.0177, y: -0.0032, z: 0.0302}
+  m_LocalPosition: {x: 0.0221, y: 0.0771, z: 0.0024}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55,9 +55,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546720653895957322}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.00084, y: 0.13041, z: -0.13691}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0006, y: 0.1294, z: -0.1412}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1786759125029253417}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 4363795817694218893}
   - component: {fileID: 7101296850162519065}
   - component: {fileID: 6022198492085565324}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet_Front_Shell2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 4860511258893974248}
   - component: {fileID: 7193743719144448368}
   - component: {fileID: 7176550841497250710}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Middle_Body_Support
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 8585949026789072610}
   - component: {fileID: 6620588242661878373}
   - component: {fileID: 1976804699176257842}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet_Back_Shell1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 7723949936226802235}
   - component: {fileID: 5390154043883459061}
   - component: {fileID: 478368889860117257}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Magazine_Remover_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 1576004911067639989}
   - component: {fileID: 3449845633848684253}
   - component: {fileID: 4341200372203230618}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left_Body_Supporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 906065172999909632}
   - component: {fileID: 1275062079590820076}
   - component: {fileID: 8441057181836136612}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right_Mode_Changer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,7 +573,7 @@ GameObject:
   - component: {fileID: 7994474107262905912}
   - component: {fileID: 3957705999280228334}
   - component: {fileID: 8266983559902767059}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -656,7 +656,7 @@ GameObject:
   - component: {fileID: 8963624712946948298}
   - component: {fileID: 2511344659245589338}
   - component: {fileID: 5682495820314704863}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Magazine_back_Part
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +739,7 @@ GameObject:
   - component: {fileID: 1919525722506362852}
   - component: {fileID: 650285915648301325}
   - component: {fileID: 4898311276800376130}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Screw_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +824,9 @@ GameObject:
   - component: {fileID: 6192455285185001626}
   - component: {fileID: 3632456976514801504}
   - component: {fileID: 2889199947718077028}
-  m_Layer: 0
+  - component: {fileID: 5828009235030452819}
+  - component: {fileID: 3355768402812150197}
+  m_Layer: 7
   m_Name: Pistol 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -868,8 +870,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.034508683, y: 0.13384342, z: 0.22056961}
-  m_Center: {x: 0.0030256473, y: 0.07282019, z: -0.024633408}
+  m_Size: {x: 0.03611985, y: 0.1410002, z: 0.21712938}
+  m_Center: {x: -0.003371474, y: 0.06924179, z: -0.022913285}
 --- !u!54 &6192455285185001626
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1061,9 +1063,119 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795e2752631e5cf489e3ae5c21eebba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1612128484263142113, guid: cd8c85e5fb80817428e7b983a882091f, type: 3}
+  bullet: {fileID: 3111123709821073303, guid: e43b9a471c8274a8fac6ae35c666fd0b, type: 3}
   firePosition: {fileID: 4799860511651871966}
   fireSpeed: 20
+--- !u!114 &5828009235030452819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3763604498974455608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4a1a556787a69444933811560f78ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletCount: 7
+  isReload: 0
+--- !u!82 &3355768402812150197
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3763604498974455608}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3899073714259699312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,7 +1187,7 @@ GameObject:
   - component: {fileID: 5797364713460765344}
   - component: {fileID: 3699081086514535421}
   - component: {fileID: 7062551537163723035}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right__Body_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1158,7 +1270,7 @@ GameObject:
   - component: {fileID: 7496859854321985641}
   - component: {fileID: 6157373977314874457}
   - component: {fileID: 6466104465119251627}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body_Groved_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1241,7 +1353,7 @@ GameObject:
   - component: {fileID: 6581841541039130250}
   - component: {fileID: 5145516948373643858}
   - component: {fileID: 7039333901845695569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left_Mode_Changer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1324,7 +1436,7 @@ GameObject:
   - component: {fileID: 2790863235551634685}
   - component: {fileID: 1307548809041760807}
   - component: {fileID: 2553570934292791993}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right_Body_Supporter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1407,7 +1519,7 @@ GameObject:
   - component: {fileID: 7183256754038439592}
   - component: {fileID: 7881064613409574653}
   - component: {fileID: 3404097829758906548}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Lower_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1490,7 +1602,7 @@ GameObject:
   - component: {fileID: 8560017622908639693}
   - component: {fileID: 7227467783938766620}
   - component: {fileID: 1001161901795195579}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Slide1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1573,7 +1685,7 @@ GameObject:
   - component: {fileID: 6669171886855136575}
   - component: {fileID: 3662477151271725856}
   - component: {fileID: 8595728197774539079}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet_Back_Shell3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1656,7 +1768,7 @@ GameObject:
   - component: {fileID: 3472560553987622289}
   - component: {fileID: 6979082901690337516}
   - component: {fileID: 7105704803453891748}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet_Front_Shell1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1741,7 +1853,7 @@ GameObject:
   - component: {fileID: 8628713065522091532}
   - component: {fileID: 1712442955634887061}
   - component: {fileID: 4335415572437731305}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet_Front_Shell3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1824,7 +1936,7 @@ GameObject:
   - component: {fileID: 3793334243833642382}
   - component: {fileID: 7847786736385308943}
   - component: {fileID: 4135160530710975361}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Magazine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1907,7 +2019,7 @@ GameObject:
   - component: {fileID: 2623320951031817559}
   - component: {fileID: 1150993040720799914}
   - component: {fileID: 6744136967129653614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Screw_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1990,7 +2102,7 @@ GameObject:
   - component: {fileID: 8138535951500111571}
   - component: {fileID: 8581256680043023638}
   - component: {fileID: 4995497646090222898}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Barrel_Lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2073,7 +2185,7 @@ GameObject:
   - component: {fileID: 3704298022957412536}
   - component: {fileID: 9017257312025641968}
   - component: {fileID: 5093305255494051955}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Magazine_Cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2156,7 +2268,7 @@ GameObject:
   - component: {fileID: 4851364115034366836}
   - component: {fileID: 200320994884535039}
   - component: {fileID: 5071761269715545218}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2239,7 +2351,7 @@ GameObject:
   - component: {fileID: 340406781633558745}
   - component: {fileID: 8743821556129834833}
   - component: {fileID: 8400232103110071177}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left__Body_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2322,7 +2434,7 @@ GameObject:
   - component: {fileID: 8766945367459172511}
   - component: {fileID: 4610743806693737994}
   - component: {fileID: 4802197754507702617}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Right_Trigger_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2405,7 +2517,7 @@ GameObject:
   - component: {fileID: 4766315883730209119}
   - component: {fileID: 884018634004883592}
   - component: {fileID: 2280249521295857254}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Front_Sight_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2488,7 +2600,7 @@ GameObject:
   - component: {fileID: 8939410225081786069}
   - component: {fileID: 2472054505879785311}
   - component: {fileID: 880060508994145164}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rear_Sight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2571,7 +2683,7 @@ GameObject:
   - component: {fileID: 2673773329493816294}
   - component: {fileID: 2362560220995488417}
   - component: {fileID: 535158542565602652}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left_Trigger_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2654,7 +2766,7 @@ GameObject:
   - component: {fileID: 6940017436889054540}
   - component: {fileID: 348311774654318160}
   - component: {fileID: 6996048787636324668}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Left_Magazine_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2737,7 +2849,7 @@ GameObject:
   - component: {fileID: 8040876100965970342}
   - component: {fileID: 463087971285343871}
   - component: {fileID: 8067797652853624073}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet_Back_Shell2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2820,7 +2932,7 @@ GameObject:
   - component: {fileID: 9204639459031839053}
   - component: {fileID: 2732712220935825240}
   - component: {fileID: 1993161131760623017}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Side_Grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2903,7 +3015,7 @@ GameObject:
   - component: {fileID: 782535757037948285}
   - component: {fileID: 1411337568761274915}
   - component: {fileID: 135731502131713607}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Thruster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2984,7 +3096,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8536490692948714285}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pistol 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
