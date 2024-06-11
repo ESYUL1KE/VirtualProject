@@ -10,6 +10,7 @@ public class TriggerEvent : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find("Player").transform;
+        timer = FindObjectOfType<Timer>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -39,6 +40,7 @@ public class TriggerEvent : MonoBehaviour
             GameObject door = GameObject.Find("Door_Roof_LOD");
             if (gameObject.name == door.name)
             {
+                player.transform.position = new Vector3(1.0f, 13.6f, 0.46f);
                 timer.GameEnd();
             }
         }

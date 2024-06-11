@@ -63,6 +63,7 @@
     <Compile Include="Assets\01.BSJ\01.Scritps\Zombie\Event\ZombieAnimationEvent.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\04.LCH\01.Scritps\Player.cs" />
+    <Compile Include="Assets\01.BSJ\01.Scritps\GameManager.cs" />
     <Compile Include="Assets\01.BSJ\01.Scritps\TriggerEvent.cs" />
     <Compile Include="Assets\02.CSH\01.Scritps\UIManager.cs" />
     <Compile Include="Assets\Asset\Particle\ParticlePack\Shared\Scripts\SimpleCameraController.cs" />
@@ -113,6 +114,7 @@
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Asset\Sounds\SoldierSoundsPack\ReadMe!.txt" />
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Asset\Particle\ParticlePack\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Asset\Particle\ParticlePack\EffectExamples\Misc Effects\Shaders\FireFly.shader" />
@@ -955,6 +957,10 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.XR.OpenXR.Features.MetaQuestSupport.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.XR.OpenXR.Features.MetaQuestSupport.Editor.dll</HintPath>
       <Private>False</Private>
@@ -969,6 +975,10 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
@@ -1047,6 +1057,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
       <Private>False</Private>
@@ -1097,6 +1111,10 @@
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
       <HintPath>Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Recorder.Base">
+      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
@@ -1197,6 +1215,10 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

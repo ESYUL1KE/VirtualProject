@@ -123,6 +123,8 @@ public class Zombie : MonoBehaviour
 
         StateAnim(ZombieAniState.Die);
 
+        GameManager.instance.zombie_Count++;
+        
         Destroy(gameObject, 1f);
     }
 
